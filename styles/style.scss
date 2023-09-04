@@ -1,0 +1,96 @@
+@import 'config';
+.right {
+    width: 60%;
+}
+
+// Styles of the left side
+.left {
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    position: relative;
+    background-color: $bg-light-blue;
+    color: #fff;
+    width: 40%;
+    padding: 3rem 0 0 2rem;
+
+    h1 {
+        font-size: 50px;
+        font-family: $ff-jakarta;
+        font-weight: 700;
+        height: 60px;
+    }
+    
+    p {
+        font-family: $ff-jakarta;
+        font-size: 50px;
+    }
+}
+
+.abstraction {
+    position: absolute;
+    top: 13rem;
+    right: -4rem;
+}
+
+// Styles of the right side
+.right {
+    // display: flex;
+    // flex-direction: column;
+    padding: 3.5rem 5rem;
+    font-family: $ff-jakarta;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    background-color: #fff;
+}
+.language-btn {
+    text-align: right;
+    padding-bottom: 3rem;
+}
+
+.right-container {
+    h2 {
+        font-size: 22px;
+    }
+
+    p {
+        padding-bottom: 1.5rem;
+        color: $light-gray;
+    }
+
+    form {
+        label {
+            color: $light-gray;
+            padding: 0px 7px;
+        }
+
+        .contacts {
+            margin: 4px auto;
+            width: 360px;
+            border: 2px solid $border-color;
+            border-radius: 5px;
+        }
+
+        #checkbox {
+            font-size: 14px;
+        }
+
+        .submit {
+            font-family: $ff-jakarta;
+        }
+
+            a {
+                text-decoration: none;
+            }
+            .button {
+               @include button($soft-blue, #fff);
+                border-radius: 10px;
+                transition: all .3s ease;
+            }
+            
+            .button:hover {
+                background-color: var(--dark-purple);
+                color: #fff;
+            }
+        
+    }
+}

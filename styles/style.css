@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.container {
+  padding: 2rem;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 1412px;
+  height: 580px;
+  background-color: #B0D8DA;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.right {
+  width: 60%;
+}
+
+.left {
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  position: relative;
+  background-color: #B0D8DA;
+  color: #fff;
+  width: 40%;
+  padding: 3rem 0 0 2rem;
+}
+
+.left h1 {
+  font-size: 50px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  height: 60px;
+}
+
+.left p {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 50px;
+}
+
+.abstraction {
+  position: absolute;
+  top: 13rem;
+  right: -4rem;
+}
+
+.right {
+  padding: 3.5rem 5rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  background-color: #fff;
+}
+
+.language-btn {
+  text-align: right;
+  padding-bottom: 3rem;
+}
+
+.right-container h2 {
+  font-size: 22px;
+}
+
+.right-container p {
+  padding-bottom: 1.5rem;
+  color: #ABABAB;
+}
+
+.right-container form label {
+  color: #ABABAB;
+  padding: 0px 7px;
+}
+
+.right-container form .contacts {
+  margin: 4px auto;
+  width: 360px;
+  border: 2px solid #D9D9D9;
+  border-radius: 5px;
+}
+
+.right-container form #checkbox {
+  font-size: 14px;
+}
+
+.right-container form .submit {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.right-container form a {
+  text-decoration: none;
+}
+
+.right-container form .button {
+  background-color: #5DC6C9;
+  color: #fff;
+  padding: 10px 160px;
+  border-radius: 10px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.right-container form .button:hover {
+  background-color: var(--dark-purple);
+  color: #fff;
+}
+/*# sourceMappingURL=style.css.map */
