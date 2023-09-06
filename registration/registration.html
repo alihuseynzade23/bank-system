@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eacamp Bank system</title>
     <link rel="stylesheet" href="/styles/style.css">
-    <link rel="stylesheet" href="/registration/registration.css">
+    <link rel="stylesheet" href="/styles/registration.css">
+    <script src="/registration/registration.js" defer></script>
 </head>
 <body>
      <!-- Start of the project -->
@@ -33,36 +34,39 @@
 
                 <h2>Əziz istifadəçi, zəhmət olmasa qeydiyyatdan keçin!</h2>
                 <p>Qeydiyyatdan keçdikən sonra, siz daxil ola bilərsiz!</p>
-                <form action="/action_page.php">
-                    <label for="type">Ad</label><br>
-                    <input type="text" class="contacts" id="fname" name="fname">
+                <form id="myForm" onsubmit="return validateForm()">
+                    <label for="fname">First Name:</label><br>
+                    <input type="text" class="contacts" id="fname" name="fname" required>
                     <span id="nameError" class="error"></span>
                     <br>
-                    <label for="type">Soyad</label><br>
-                    <input type="text" class="contacts" id="pass" name="pass"><br>
-                    <label for="type">E-mail ünvanınız</label>
+            
+                    <label for="sname">Last Name:</label><br>
+                    <input class="contacts" type="text" id="sname" name="sname" required>
                     <span id="surnameError" class="error"></span>
                     <br>
-                    <input type="email" class="contacts" id="email" name="email">
+            
+                    <label for="email">Email:</label><br>
+                    <input class="contacts" type="email" id="email" name="email" required>
                     <span id="emailError" class="error"></span>
                     <br>
-                    <label for="password">Şifrə</label><br>
-                    <input type="password" class="contacts" id="pass" name="pass"><br>
-                    <label for="password">Şifrə təkrar</label><br>
-                    <input type="password" class="contacts" id="pass" name="pass"><br>
-
-                    <input type="checkbox" name="checkbox" id="checkbox_id" value="value">
-                    <label id="checkbox" for="checkbox_id">Məni yadda saxla</label><br>
-                    
-                    <a href="#" class="button">Daxil ol</a>
-
-                  </form> 
-
+            
+                    <label for="pass">Password:</label><br>
+                    <input class="contacts" type="password" id="pass" name="pass" required>
+                    <span id="passError" class="error"></span>
+                    <br>
+            
+                    <label for="pass2">Confirm Password:</label><br>
+                    <input class="contacts" type="password" id="pass2" name="pass2" required>
+                    <span id="passError2" class="error"></span>
+                    <br>
+            
+                    <button class="submit" type="button" id="registrationSubmit">Qeydiyyat</button>
+                </form>
+          
             </div>
         </div>
     </div>
     </div>
 
-    <script src="/index.js"></script>
 </body>
 </html>

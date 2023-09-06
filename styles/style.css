@@ -201,25 +201,72 @@ select {
   text-decoration: none;
 }
 
-.right-container .button {
+.submit {
   margin-top: 1.5rem;
   background-color: #5DC6C9;
   color: #fff;
   padding: 10px 160px;
-  display: inline-block;
-  padding: 12px 125px;
-  font-size: 14px;
+  max-width: 300px;
   text-align: center;
-  text-decoration: none;
+  width: 100%;
   border: none;
-  border-radius: 25px;
+  /* Remove border */
   cursor: pointer;
+  /* Change cursor to pointer on hover */
+  font-size: 20px;
+  /* Font size */
+  border-radius: 25px;
+  /* Rounded corners */
   -webkit-transition: .3s ease;
   transition: .3s ease;
+  padding: 0.5rem 0;
 }
 
-.right-container .button:hover {
+/* Change button style on hover */
+.submit:hover {
   background-color: blue;
+}
+
+.error {
+  color: #fff;
+  background-color: transparent;
+  /* Default background color */
+  position: relative;
+  /* Enable relative positioning */
+  padding-left: 30px;
+  /* Add padding on the left side for the rotated arrow */
+}
+
+.error:not(:empty) {
+  background-color: #5DC6C9;
+  /* Change background color to a light color (for example) */
+  padding: 15px 20px;
+  font-size: 15px;
+  border-radius: 10px;
+  margin-left: 1.5rem;
+}
+
+/* Style for the error message when it has content (error message is displayed) */
+.error:not(:empty)::before {
+  content: '';
+  /* Add content to the pseudo-element */
+  position: absolute;
+  /* Position it absolutely */
+  left: -3.5%;
+  /* Position it on the left side */
+  top: 28%;
+  /* Center vertically */
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  /* Create a top arrow (increased size) */
+  border-bottom: 12px solid transparent;
+  /* Create a bottom arrow (increased size) */
+  border-right: 12px solid #5DC6C9;
+  /* Arrow color (red in this example) */
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  /* Rotate the arrow 180 degrees to the left */
 }
 
 @media all and (max-width: 970px) {
@@ -240,7 +287,7 @@ select {
   .right-container p {
     font-size: 14px;
   }
-  .right-container .button {
+  .right-container #registrationSubmit {
     padding: 12px 110px;
   }
 }
@@ -263,13 +310,13 @@ select {
   .right-container p {
     font-size: 11px;
   }
-  .right-container .button {
+  .right-container #registrationSubmit {
     padding: 12px 90px;
   }
 }
 
 @media all and (max-width: 710px) {
-  .right-container .button {
+  .right-container #registrationSubmit {
     padding: 10px 70px;
     font-size: 12px;
   }
@@ -310,7 +357,7 @@ select {
   .right-container p {
     font-size: 10px;
   }
-  .right-container .button {
+  .right-container #registrationSubmit {
     padding: 10px 30px;
   }
 }
@@ -341,7 +388,7 @@ select {
   .right-container p {
     font-size: 7px;
   }
-  .right-container .button {
+  .right-container input[type="submit"] {
     padding: 10px 30px;
     font-size: 6px;
   }
@@ -360,5 +407,9 @@ select {
   .right-container form #checkbox {
     font-size: 5.5px;
   }
+}
+
+input:focus {
+  border-color: red;
 }
 /*# sourceMappingURL=style.css.map */

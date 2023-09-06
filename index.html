@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EAcamp Bank System</title>
     <link rel="stylesheet" href="/styles/style.css">
+    <script src="/index.js" defer></script>
 </head>
 <body>
     <!-- Start of the project -->
@@ -34,15 +35,15 @@
                 <p>Qeydiyyatdan keçdikən sonra, siz daxil ola bilərsiz!</p>
                 <form action="/action_page.php">
                     <label for="email">E-mail</label><br>
-                    <input type="email" class="contacts" id="email" name="email"><br>
+                    <input type="email" class="contacts" id="logEmail" name="email"><br>
                     <label for="password">Şifrə</label><br>
-                    <input type="password" class="contacts" id="pass" name="pass"><br><br>
+                    <input type="password" class="contacts" id="logPass" name="pass"><br><br>
                     <p>Akkaunt yoxdu? <a href="/registration/registration.html">Akkaunt yarat</a></p>
 
                     <input type="checkbox" name="checkbox" id="checkbox_id" value="value">
                     <label id="checkbox" for="checkbox_id">Məni yadda saxla</label><br>
                     
-                    <a href="#" class="button">Daxil ol</a>
+                    <button class="submit" type="button" id="signInSubmit">Daxil ol</button>
 
                   </form> 
 
@@ -51,6 +52,5 @@
     </div>
     </div>
 
-    <script src="/index.js"></script>
 </body>
 </html>

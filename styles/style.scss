@@ -1,4 +1,5 @@
 @import 'config';
+
 .right {
     width: 60%;
 }
@@ -95,6 +96,7 @@
             border: 2px solid $border-color;
             border-radius: 5px;
         }
+    
 
         #checkbox {
             font-size: 14px;
@@ -111,24 +113,71 @@
         text-decoration: none;
     }
  
-    .button {
-            margin-top: 1.5rem;
-            @include button($soft-blue, #fff);
-            display: inline-block;
-            padding: 12px 125px;
-            font-size: 14px;
-            text-align: center;
-            text-decoration: none;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: .3s ease;
-        }
-
-     .button:hover {
-        background-color: blue;
-     }  
+    // input[type="submit"] {
+    //     margin-top: 1.5rem;
+    //     @include button($soft-blue, #fff);
+    //     max-width: 300px;
+    //     width: 100%;
+    //     border: none; /* Remove border */
+    //     cursor: pointer; /* Change cursor to pointer on hover */
+    //     font-size: 20px; /* Font size */
+    //     border-radius: 5px; /* Rounded corners */
+    //     transition: .3s ease;
+    //   }
+      
+    //   /* Change button style on hover */
+    //   input[type="submit"]:hover {
+    //     background-color: blue;
+    //   }
 }
+.submit {
+    margin-top: 1.5rem;
+    @include button($soft-blue, #fff);
+    max-width: 300px;
+    text-align: center;
+    width: 100%;
+    border: none; /* Remove border */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    font-size: 20px; /* Font size */
+    border-radius: 25px; /* Rounded corners */
+    transition: .3s ease;
+    padding: 0.5rem 0;
+}
+  
+  /* Change button style on hover */
+  .submit:hover {
+    background-color: blue;
+  }
+
+  .error {
+    color: #fff;
+    background-color: transparent; /* Default background color */
+    position: relative; /* Enable relative positioning */
+    padding-left: 30px; /* Add padding on the left side for the rotated arrow */
+}
+
+.error:not(:empty) {
+    background-color: $soft-blue; /* Change background color to a light color (for example) */
+    padding: 15px 20px;
+    font-size: 15px;
+    border-radius: 10px;
+    margin-left: 1.5rem;
+}
+/* Style for the error message when it has content (error message is displayed) */
+.error:not(:empty)::before {
+    content: ''; /* Add content to the pseudo-element */
+    position: absolute; /* Position it absolutely */
+    left: -3.5%; /* Position it on the left side */
+    top: 28%; /* Center vertically */
+    width: 0;
+    height: 0;
+    border-top: 12px solid transparent; /* Create a top arrow (increased size) */
+    border-bottom: 12px solid transparent; /* Create a bottom arrow (increased size) */
+    border-right: 12px solid $soft-blue; /* Arrow color (red in this example) */
+    transform: rotate(360deg); /* Rotate the arrow 180 degrees to the left */
+}
+
+  // Start of the responsive
 
 @media all and (max-width: 970px) {
     .left {
@@ -154,7 +203,7 @@
         p {
             font-size: 14px;
         }
-        .button {
+        #registrationSubmit {
             padding: 12px 110px;
         }
 
@@ -162,7 +211,6 @@
 }
 }
 
-// Start of the responsive
 
 @media all and (max-width: 775px) {
     .left {
@@ -188,7 +236,7 @@
         p {
             font-size: 11px;
         }
-        .button {
+        #registrationSubmit {
             padding: 12px 90px;
         }
 
@@ -196,9 +244,12 @@
 }
 }
 
+ 
+
+
 @media all and (max-width:710px) {
     .right-container {
-        .button {
+        #registrationSubmit {
             padding: 10px 70px;
             font-size: 12px;
         }
@@ -251,7 +302,7 @@
         p {
             font-size: 10px;
         }
-        .button {
+        #registrationSubmit {
             padding: 10px 30px;
         }
 
@@ -291,7 +342,7 @@
         p {
             font-size: 7px;
         }
-        .button {
+        input[type="submit"] {
             padding: 10px 30px;
             font-size: 6px;
         }
@@ -316,4 +367,7 @@
         }
     
 }
+}
+input:focus {
+    border-color: red; 
 }

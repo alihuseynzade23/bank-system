@@ -1,22 +1,48 @@
-function validateName(inputId, errorId) {
-    const input = document.getElementById(inputId)
-    const error = document.getElementById(errorId)
-    const nameRegex = /^[A-Za-z]+$/;
+// Get references to the input elements
+const emailInput = document.getElementById('logEmail');
+const passInput = document.getElementById('logPass');
 
-    if(input.value === '') {
-        error.textContent = 'Xanani doldurun'
-    } else if(!nameRegex.test(input.value)) {
-        error.textContent = 'Səhv input. Ancaq hərflər qəbul olunur.'
-    } else {
-        error.textContent = ''
+
+// Function to save the input values to local storage
+function saveToLocalStorage() {
+    localStorage.setItem('email', emailInput.value);
+    localStorage.setItem('password', passInput.value);
+}
+// Add event listeners to the input elements to save their values
+
+
+
+function checkTheData() {
+    const savedEmail = localStorage.getItem('email');
+    const savedPassword = localStorage.getItem('password');
+    
+    const emailInputValue = document.getElementById('logEmail').value;
+    const passInputValue = document.getElementById('logPass').value;
+
+    // Check if the entered values match the saved values
+    for(let i = 0; i < emailInputValue.length; i++) {
+        if(emailInputValue[i] !== savedEmail[i] || passInputValue[i] !== savedPassword[i] || emailInputValue.length === 0 || passInputValue.length === 0) {
+            return false
+        } else {
+            return true
+        }
+
     }
+
+    
 }
 
-document.getElementById("fname").addEventListener("input", () => {
-    validateName("fname", "nameError");
-  });
-  
-  document.getElementById("sname").addEventListener("input", () => {
-    validateName("sname", "surnameError");
-  });
-  
+emailInput.addEventListener('input', saveToLocalStorage);
+passInput.addEventListener('input', saveToLocalStorage);
+
+document.getElementById('signInSubmit').addEventListener('click', () => {
+    if (checkTheData()) {
+        window.location.href = 'http://127.0.0.1:5500/pages/main.html';
+    } else {
+        alert('Invalid email or password.');
+    }
+});
+
+// Load saved values from local storage when the page loads
+// emailInput.value = localStorage.getItem('email') || '';
+// passInput.value = localStorage.getItem('password') || '';
