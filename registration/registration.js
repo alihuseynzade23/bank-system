@@ -1,3 +1,19 @@
+// Get references to the input elements
+const emailInput = document.getElementById('email');
+const passInput = document.getElementById('pass');
+
+
+// Function to save the input values to local storage
+function saveToLocalStorage() {
+    localStorage.setItem('email', emailInput.value);
+    localStorage.setItem('password', passInput.value);
+}
+
+
+emailInput.addEventListener('input', saveToLocalStorage);
+passInput.addEventListener('input', saveToLocalStorage);
+
+
 function validateForm() {
     // Call all validation functions
     validateName("fname", "nameError");

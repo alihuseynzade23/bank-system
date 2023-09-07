@@ -139,7 +139,7 @@ select {
 }
 
 .right {
-  padding: 3.5rem 5rem;
+  padding: 3.5rem 3rem;
   font-family: "Plus Jakarta Sans", sans-serif;
   border-top-left-radius: 40px;
   border-bottom-left-radius: 40px;
@@ -240,7 +240,7 @@ select {
 .error:not(:empty) {
   background-color: #5DC6C9;
   /* Change background color to a light color (for example) */
-  padding: 15px 20px;
+  padding: 15px 15px;
   font-size: 15px;
   border-radius: 10px;
   margin-left: 1.5rem;

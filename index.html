@@ -35,9 +35,13 @@
                 <p>Qeydiyyatdan keçdikən sonra, siz daxil ola bilərsiz!</p>
                 <form action="/action_page.php">
                     <label for="email">E-mail</label><br>
-                    <input type="email" class="contacts" id="logEmail" name="email"><br>
+                    <input type="email" class="contacts" id="logEmail" name="email">
+                    <span id="logError" class="error"></span>
+                    <br>
                     <label for="password">Şifrə</label><br>
-                    <input type="password" class="contacts" id="logPass" name="pass"><br><br>
+                    <input type="password" class="contacts" id="logPass" name="pass">
+                    <span id="logError" class="error"></span>
+                    <br><br>
                     <p>Akkaunt yoxdu? <a href="/registration/registration.html">Akkaunt yarat</a></p>
 
                     <input type="checkbox" name="checkbox" id="checkbox_id" value="value">
