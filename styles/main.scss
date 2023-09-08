@@ -1,0 +1,30 @@
+.wrapper {
+    background-color: #fff;
+    border-radius: 40px;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.20);
+    display: flex;
+
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.test {
+    background-color: #000;
+}
+
+.wallet {
+    display: flex;
+}
+
+.process {
+    display: flex;
+}
+
+.payments {
+    display: flex;
+    justify-content: space-between;
+}
