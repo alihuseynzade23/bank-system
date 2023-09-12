@@ -1,30 +1,205 @@
+@import 'config';
+
 .wrapper {
     background-color: #fff;
     border-radius: 40px;
     box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.20);
     display: flex;
-
+    justify-content: flex-start;
+    height: auto;
 }
+
+
+// Header styles
 
 header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    margin: 1.5rem 1.5rem;
+
+   nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+   }
+
+   a svg {
+    margin: 0.8rem 0;
+   }
+
+}
+
+
+.test4 svg {
+    background-color: #000;
+    // padding: 20px;
+}
+
+.test4 svg {
+    border-radius: 50%;
+}
+
+.test4  {
+    text-decoration: none;
+}
+
+.test4 p {
+    color: #000;
 }
 
 .test {
-    background-color: #000;
+    background-color: $soft-blue;
 }
 
-.wallet {
-    display: flex;
+
+
+// Card holder section
+
+.info-section {
+    padding: 2rem 1rem;
+    font-family: $ff-jakarta;
+    width: 35%;
+    position: relative;
+    background-color: #5DC6C91A;
+
+
+    .header {
+        margin-bottom: 3rem;
+    }
+
+    .balans {
+        background-color: $soft-blue;
+        padding: 1.2rem 1rem;
+        border-radius: 24px;
+        box-shadow: 0px 3px 75px 0px rgba(0, 0, 0, 0.10);
+        margin-bottom: 4rem;
+
+        h3 {
+            color: #fff;
+            letter-spacing: 2px;
+            font-weight: 400;
+            font-size: 18px;
+            margin-bottom: 2rem;
+        }
+
+    }
+   
+    .wallet {
+        display: flex;
+
+        .money {
+            margin-left: 1rem;
+
+            p {
+                color: #fff; 
+            }
+
+            .p1 {
+                font-size: 25px;
+                font-weight: 700;
+            }
+
+            .p2 {
+                font-weight: 400;
+                font-size: 14px;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .vector {
+        position: absolute;
+        top: 10.7%;
+        right: 3%;
+        border-radius: 24px;
+    }
+
+    .lastProcess {
+        font-size: 16px;
+        color: $soft-blue;
+        font-weight: 500;
+    }
+
+    hr {
+        margin: 0.5rem 0 1rem 0;
+        height: 2px;
+        background-color: #E3E3E3;
+        border: none;
+    }
+
+    .process {
+
+        .process1 {
+            margin-left: -1.5rem;
+        }
+
+        .process2 {
+            margin-left: -6rem;
+        }
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .green {
+            color: green;
+        }
+
+        .red {
+            color: red;
+        }
+
+
+            // margin-left: 0.5rem;
+            h4 {
+                font-size: 12px;
+                font-weight: 500;
+            }
+
+            p {
+                font-size: 11px;
+                color: rgba(0, 0, 0, 0.50);
+
+            }
+        }
+
+        h2 {
+            font-size: 15px;
+            margin-left: 2rem;
+        }
+    }
+
+
+section {
+    width: 65%;
 }
 
-.process {
-    display: flex;
+
+
+
+.card {
+    background-color: #9158ff;
 }
 
-.payments {
-    display: flex;
-    justify-content: space-between;
+
+
+section {
+    border: 2px solid black;
 }
+
+
+
+// #mySVG {
+//     stroke: black; /* Initial stroke color */
+//     fill: none; /* Initial fill color */
+//     transition: 0.3s; /* Smooth transition */
+// }
+
+// #mySVG:hover {
+//     stroke: white; /* New stroke color when clicked */
+//     fill: blue; /* New fill color when clicked */
+//     cursor: pointer; /* Change cursor on hover */
+// }

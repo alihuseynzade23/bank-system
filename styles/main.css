@@ -1,3 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.container {
+  padding: 2rem;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #B0D8DA;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
 .wrapper {
   background-color: #fff;
   border-radius: 40px;
@@ -6,6 +109,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  height: auto;
 }
 
 header {
@@ -19,30 +126,176 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1.5rem 1.5rem;
 }
 
-.test {
+header nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header a svg {
+  margin: 0.8rem 0;
+}
+
+.test4 svg {
   background-color: #000;
 }
 
-.wallet {
+.test4 svg {
+  border-radius: 50%;
+}
+
+.test4 {
+  text-decoration: none;
+}
+
+.test4 p {
+  color: #000;
+}
+
+.test {
+  background-color: #5DC6C9;
+}
+
+.info-section {
+  padding: 2rem 1rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  width: 35%;
+  position: relative;
+  background-color: #5DC6C91A;
+}
+
+.info-section .header {
+  margin-bottom: 3rem;
+}
+
+.info-section .balans {
+  background-color: #5DC6C9;
+  padding: 1.2rem 1rem;
+  border-radius: 24px;
+  -webkit-box-shadow: 0px 3px 75px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 3px 75px 0px rgba(0, 0, 0, 0.1);
+  margin-bottom: 4rem;
+}
+
+.info-section .balans h3 {
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 2rem;
+}
+
+.info-section .wallet {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.process {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.info-section .wallet .money {
+  margin-left: 1rem;
 }
 
-.payments {
+.info-section .wallet .money p {
+  color: #fff;
+}
+
+.info-section .wallet .money .p1 {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.info-section .wallet .money .p2 {
+  font-weight: 400;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.info-section .vector {
+  position: absolute;
+  top: 10.7%;
+  right: 3%;
+  border-radius: 24px;
+}
+
+.info-section .lastProcess {
+  font-size: 16px;
+  color: #5DC6C9;
+  font-weight: 500;
+}
+
+.info-section hr {
+  margin: 0.5rem 0 1rem 0;
+  height: 2px;
+  background-color: #E3E3E3;
+  border: none;
+}
+
+.info-section .process {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.info-section .process .process1 {
+  margin-left: -1.5rem;
+}
+
+.info-section .process .process2 {
+  margin-left: -6rem;
+}
+
+.info-section .process .green {
+  color: green;
+}
+
+.info-section .process .red {
+  color: red;
+}
+
+.info-section .process h4 {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.info-section .process p {
+  font-size: 11px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.info-section h2 {
+  font-size: 15px;
+  margin-left: 2rem;
+}
+
+section {
+  width: 65%;
+}
+
+.card {
+  background-color: #9158ff;
+}
+
+section {
+  border: 2px solid black;
 }
 /*# sourceMappingURL=main.css.map */
