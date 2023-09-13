@@ -1,60 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EAcamp Bank System</title>
-    <link rel="stylesheet" href="/styles/style.css">
-    <script src="/index.js" defer></script>
-</head>
-<body>
-    <!-- Start of the project -->
-    <div class="container">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>EAcamp Bank System</title>
+        <link rel="stylesheet" href="/styles/style.css" />
+        <script src="/index.js" defer></script>
+    </head>
+    <body>
+        <!-- Start of the project -->
+        <div class="container">
+            <div class="wrapper">
+                <!-- Left container -->
+                <div class="left">
+                    <h1>
+                        Eacamp Bank
+                        <p>Xoş gəlmisiz!</p>
+                    </h1>
 
-     <div class="wrapper">
-        <!-- Left container -->
-        <div class="left">
-            <h1>Eacamp Bank  <p>Xoş gəlmisiz!</p></h1>
-           
-            <img class="abstraction" src="/images/Abstraction.png" width="370px" height="370px" alt="">
-        </div>
+                    <img
+                        class="abstraction"
+                        src="/images/Abstraction.png"
+                        width="370px"
+                        height="370px"
+                        alt=""
+                    />
+                </div>
 
-        <!-- Right container -->
-        <div class="right">
+                <!-- Right container -->
+                <div class="right">
+                    <div class="language-selector">
+                        <select id="languages">
+                            <option value="az">Azərbaycan</option>
+                            <option value="en">English</option>
+                            <option value="ru">Русский</option>
+                        </select>
+                    </div>
+                    <div class="right-container">
+                        <h2>Daxil olmag üçün e-mail və şifrəni daxil edin!</h2>
+                        <p>
+                            Qeydiyyatdan keçdikən sonra, siz daxil ola bilərsiz!
+                        </p>
+                        <form action="/action_page.php">
+                            <label for="email">E-mail</label><br />
+                            <input
+                                type="email"
+                                class="contacts"
+                                id="logEmail"
+                                name="email"
+                            />
+                            <span id="logError" class="error"></span>
+                            <br />
+                            <label for="password">Şifrə</label><br />
+                            <input
+                                type="password"
+                                class="contacts"
+                                id="logPass"
+                                name="pass"
+                            />
+                            <span id="logError" class="error"></span>
+                            <br /><br />
+                            <p>
+                                Akkaunt yoxdu?
+                                <a href="/registration/registration.html"
+                                    >Akkaunt yarat</a
+                                >
+                            </p>
 
-            <div class="language-selector">
-                <select id="languages">
-                  <option value="az">Azərbaycan</option>
-                  <option value="en">English</option>
-                  <option value="ru">Русский</option>
-                </select>
-              </div>
-            <div class="right-container">
+                            <input
+                                type="checkbox"
+                                name="checkbox"
+                                id="checkbox_id"
+                                value="value"
+                            />
+                            <label id="checkbox" for="checkbox_id"
+                                >Məni yadda saxla</label
+                            ><br />
 
-                <h2>Daxil olmag üçün e-mail və şifrəni daxil edin!</h2>
-                <p>Qeydiyyatdan keçdikən sonra, siz daxil ola bilərsiz!</p>
-                <form action="/action_page.php">
-                    <label for="email">E-mail</label><br>
-                    <input type="email" class="contacts" id="logEmail" name="email">
-                    <span id="logError" class="error"></span>
-                    <br>
-                    <label for="password">Şifrə</label><br>
-                    <input type="password" class="contacts" id="logPass" name="pass">
-                    <span id="logError" class="error"></span>
-                    <br><br>
-                    <p>Akkaunt yoxdu? <a href="/registration/registration.html">Akkaunt yarat</a></p>
-
-                    <input type="checkbox" name="checkbox" id="checkbox_id" value="value">
-                    <label id="checkbox" for="checkbox_id">Məni yadda saxla</label><br>
-                    
-                    <button class="submit" type="button" id="signInSubmit">Daxil ol</button>
-
-                  </form> 
-
+                            <button
+                                class="submit"
+                                type="button"
+                                id="signInSubmit"
+                            >
+                                Daxil ol
+                            </button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    </div>
-
-</body>
+    </body>
 </html>

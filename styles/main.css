@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&display=swap");
 /* Box sizing rules */
 *,
 *::before,
@@ -26,8 +28,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
@@ -94,7 +96,7 @@ select {
           justify-content: center;
   width: 100%;
   height: 100vh;
-  background-color: #B0D8DA;
+  background-color: #b0d8da;
   border-top-left-radius: 40px;
   border-bottom-left-radius: 40px;
   -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
@@ -150,8 +152,36 @@ header a svg {
   margin: 0.8rem 0;
 }
 
-.test4 svg {
-  background-color: #000;
+header .exit-background {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .exit-background p {
+  color: #5dc6c9;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  margin-right: 6px;
+}
+
+header .exit-background .exit-icon {
+  background-color: #5dc6c9;
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  border-radius: 50px;
 }
 
 .test4 svg {
@@ -166,16 +196,12 @@ header a svg {
   color: #000;
 }
 
-.test {
-  background-color: #5DC6C9;
-}
-
 .info-section {
   padding: 2rem 1rem;
   font-family: "Plus Jakarta Sans", sans-serif;
   width: 35%;
   position: relative;
-  background-color: #5DC6C91A;
+  background-color: #5dc6c91a;
 }
 
 .info-section .header {
@@ -183,7 +209,7 @@ header a svg {
 }
 
 .info-section .balans {
-  background-color: #5DC6C9;
+  background-color: #5dc6c9;
   padding: 1.2rem 1rem;
   border-radius: 24px;
   -webkit-box-shadow: 0px 3px 75px 0px rgba(0, 0, 0, 0.1);
@@ -226,21 +252,21 @@ header a svg {
 
 .info-section .vector {
   position: absolute;
-  top: 10.7%;
+  top: 14.6%;
   right: 3%;
   border-radius: 24px;
 }
 
 .info-section .lastProcess {
   font-size: 16px;
-  color: #5DC6C9;
+  color: #5dc6c9;
   font-weight: 500;
 }
 
 .info-section hr {
   margin: 0.5rem 0 1rem 0;
   height: 2px;
-  background-color: #E3E3E3;
+  background-color: #e3e3e3;
   border: none;
 }
 
@@ -289,13 +315,358 @@ header a svg {
 
 section {
   width: 65%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 35px 38px;
+}
+
+section .payments-card {
+  width: 100%;
+  height: 450px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+section .payments {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section .payments h3 {
+  font-size: 23px;
+  font-weight: 500;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+section .payments p {
+  padding: 6px 14px;
+  border-radius: 50%;
+  background-color: #5dc6c9;
+  color: #fff;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 6px;
+}
+
+section .payments-hr {
+  margin-bottom: 1.5rem;
+  height: 2px;
+  background-color: #e3e3e3;
+  border: none;
+}
+
+section .grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+section .grid-container .wrapper-grid {
+  background-color: #e2ecf3;
+  width: 100%;
+  max-width: 80px;
+  height: 110px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 15px;
+}
+
+section .grid-container .wrapper-grid p {
+  margin-top: 13px;
+  color: #452f02;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+section .payments-container {
+  width: 50%;
+}
+
+section .grid-item {
+  cursor: pointer;
+  padding: 15px 5px;
+  border-radius: 50%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  max-width: 60px;
+}
+
+section .digital-card {
+  width: 50%;
+  margin-left: 30px;
+}
+
+section .digital-card h3 {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  margin-bottom: 20px;
+}
+
+section .digital-card .card {
+  padding: 10px 16px;
+  color: #fff;
+  border-radius: 20px;
+}
+
+section .digital-card .card .currency {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+section .digital-card .card .currency .curr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .digital-card .card .currency .curr p {
+  font-size: 19px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  border: 1px solid #000;
+  border-radius: 6px;
+  padding: 0 6px;
+}
+
+section .digital-card .card .currency .curr h2 {
+  margin-left: 11px;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+}
+
+section .digital-card .card .card-number h1 {
+  font-family: "DM Mono", monospace;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+section .digital-card .card .card-owner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .digital-card .card .owner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Inter", sans-serif;
+}
+
+section .digital-card .card .owner p {
+  font-size: 8px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+section .digital-card .card .owner h4 {
+  margin-left: 5px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .card {
   background-color: #9158ff;
 }
 
-section {
-  border: 2px solid black;
+.percentages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.percentages .percentage-block {
+  background-color: #e2ecf3;
+  width: 100%;
+  max-width: 210px;
+  -webkit-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.05);
+  border-radius: 15px;
+  height: 300px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.percentages .percentage-block h3 {
+  font-size: 16px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 21px 18px;
+}
+
+.percentages .percentage-block .money1 {
+  position: absolute;
+  top: 6%;
+  left: 15%;
+}
+
+.percentages .percentage-block .money2 {
+  position: absolute;
+  top: 3%;
+  left: 8%;
+}
+
+.percentages .percentage-block .money3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.percentages .block2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 21px 18px;
+}
+
+.percentages .block2 h2 {
+  color: #5dc6c9;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 800;
+  font-size: 45px;
+}
+
+.percentages .block3 h2 {
+  margin-top: auto;
+  margin-bottom: 1rem;
+  padding: 21px 18px;
+  color: #429c9e;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 800;
+}
+
+.percentages .block3 h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+}
+
+.percentages .person {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  color: #5dc6c9;
+}
+
+.percentages .person .person-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 33%;
+}
+
+.percentages .person .person-text h3 {
+  font-size: 60px;
+}
+
+.percentages .person .person-text h4 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-left: 1.2rem;
+  color: #52a7a9;
+}
+
+.percentages .person img {
+  margin-top: 15px;
 }
 /*# sourceMappingURL=main.css.map */

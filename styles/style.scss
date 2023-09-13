@@ -1,4 +1,4 @@
-@import 'config';
+@import "config";
 
 .right {
     width: 60%;
@@ -20,7 +20,7 @@
         font-weight: 700;
         height: 60px;
     }
-    
+
     p {
         font-family: $ff-jakarta;
         font-size: 50px;
@@ -29,7 +29,6 @@
     img {
         max-width: 100%;
         width: 370px;
-        // height="370px"
     }
 }
 
@@ -42,15 +41,12 @@
 // Styles of the right side
 
 .right {
-    // display: flex;
-    // flex-direction: column;
     padding: 3.5rem 3rem;
     font-family: $ff-jakarta;
     border-top-left-radius: 40px;
     border-bottom-left-radius: 40px;
     background-color: #fff;
 }
-
 
 .language-selector {
     text-align: right;
@@ -65,7 +61,6 @@
 }
 
 .right-container {
- 
     h2 {
         font-size: 22px;
     }
@@ -77,13 +72,13 @@
 
     form {
         input[type="email"] {
-            font-family: $ff-inter; /* Replace with your preferred font family */
-          }
+            font-family: $ff-inter;
+        }
 
-          input {
+        input {
             padding: 5px 5px;
         }
-          
+
         label {
             color: $light-gray;
             padding: 0px 7px;
@@ -96,7 +91,6 @@
             border: 2px solid $border-color;
             border-radius: 5px;
         }
-    
 
         #checkbox {
             font-size: 14px;
@@ -105,30 +99,11 @@
         .submit {
             font-family: $ff-jakarta;
         }
-
-       
     }
 
     a {
         text-decoration: none;
     }
- 
-    // input[type="submit"] {
-    //     margin-top: 1.5rem;
-    //     @include button($soft-blue, #fff);
-    //     max-width: 300px;
-    //     width: 100%;
-    //     border: none; /* Remove border */
-    //     cursor: pointer; /* Change cursor to pointer on hover */
-    //     font-size: 20px; /* Font size */
-    //     border-radius: 5px; /* Rounded corners */
-    //     transition: .3s ease;
-    //   }
-      
-    //   /* Change button style on hover */
-    //   input[type="submit"]:hover {
-    //     background-color: blue;
-    //   }
 }
 .submit {
     margin-top: 1.5rem;
@@ -136,28 +111,28 @@
     max-width: 300px;
     text-align: center;
     width: 100%;
-    border: none; /* Remove border */
-    cursor: pointer; /* Change cursor to pointer on hover */
-    font-size: 20px; /* Font size */
-    border-radius: 25px; /* Rounded corners */
-    transition: .3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 25px;
+    transition: 0.3s ease;
     padding: 0.5rem 0;
 }
-  
-  /* Change button style on hover */
-  .submit:hover {
-    background-color: blue;
-  }
 
-  .error {
+/* Change button style on hover */
+.submit:hover {
+    background-color: blue;
+}
+
+.error {
     color: #fff;
-    background-color: transparent; /* Default background color */
-    position: relative; /* Enable relative positioning */
-    padding-left: 30px; /* Add padding on the left side for the rotated arrow */
+    background-color: transparent;
+    position: relative;
+    padding-left: 30px;
 }
 
 .error:not(:empty) {
-    background-color: $soft-blue; /* Change background color to a light color (for example) */
+    background-color: $soft-blue;
     padding: 15px 15px;
     font-size: 15px;
     border-radius: 10px;
@@ -165,27 +140,26 @@
 }
 /* Style for the error message when it has content (error message is displayed) */
 .error:not(:empty)::before {
-    content: ''; /* Add content to the pseudo-element */
-    position: absolute; /* Position it absolutely */
-    left: -3.5%; /* Position it on the left side */
-    top: 28%; /* Center vertically */
+    content: "";
+    position: absolute;
+    left: -3.5%;
+    top: 28%;
     width: 0;
     height: 0;
-    border-top: 12px solid transparent; /* Create a top arrow (increased size) */
-    border-bottom: 12px solid transparent; /* Create a bottom arrow (increased size) */
-    border-right: 12px solid $soft-blue; /* Arrow color (red in this example) */
-    transform: rotate(360deg); /* Rotate the arrow 180 degrees to the left */
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-right: 12px solid $soft-blue;
+    transform: rotate(360deg);
 }
 
-  // Start of the responsive
+// Start of the responsive
 
 @media all and (max-width: 970px) {
-    
     .left {
         h1 {
             font-size: 40px;
         }
-        
+
         p {
             font-size: 40px;
         }
@@ -196,29 +170,25 @@
         }
     }
     .right-container {
- 
         h2 {
             font-size: 16px;
         }
-    
+
         p {
             font-size: 14px;
         }
         #registrationSubmit {
             padding: 12px 110px;
         }
-
-    
+    }
 }
-}
-
 
 @media all and (max-width: 775px) {
     .left {
         h1 {
             font-size: 30px;
         }
-        
+
         p {
             font-size: 30px;
         }
@@ -229,26 +199,20 @@
         }
     }
     .right-container {
- 
         h2 {
             font-size: 11px;
         }
-    
+
         p {
             font-size: 11px;
         }
         #registrationSubmit {
             padding: 12px 90px;
         }
-
-    
-}
+    }
 }
 
- 
-
-
-@media all and (max-width:710px) {
+@media all and (max-width: 710px) {
     .right-container {
         #registrationSubmit {
             padding: 10px 70px;
@@ -266,8 +230,7 @@
             #checkbox {
                 font-size: 12px;
             }
-        }        
-        
+        }
     }
 }
 
@@ -276,7 +239,7 @@
         h1 {
             font-size: 20px;
         }
-        
+
         p {
             font-size: 20px;
         }
@@ -288,27 +251,24 @@
     }
 
     select#languages {
-        font-size: 13px; /* Change the font size to your desired value */
-      }
-    
-      option {
-        font-size: 14px; /* Change the font size of option tags to your desired value */
-      }
+        font-size: 13px;
+    }
+
+    option {
+        font-size: 14px;
+    }
     .right-container {
- 
         h2 {
             font-size: 10px;
         }
-    
+
         p {
             font-size: 10px;
         }
         #registrationSubmit {
             padding: 10px 30px;
         }
-
-    
-}
+    }
 }
 
 @media all and (max-width: 486px) {
@@ -316,7 +276,7 @@
         h1 {
             font-size: 15px;
         }
-        
+
         p {
             font-size: 15px;
         }
@@ -328,18 +288,17 @@
     }
 
     select#languages {
-        font-size: 9px; /* Change the font size to your desired value */
-      }
-    
-      option {
-        font-size: 9px; /* Change the font size of option tags to your desired value */
-      }
+        font-size: 9px;
+    }
+
+    option {
+        font-size: 9px;
+    }
     .right-container {
- 
         h2 {
             font-size: 7px;
         }
-    
+
         p {
             font-size: 7px;
         }
@@ -347,18 +306,18 @@
             padding: 10px 30px;
             font-size: 6px;
         }
-            p {
-                padding-bottom: 0.5rem;
+        p {
+            padding-bottom: 0.5rem;
+        }
+
+        form {
+            label {
+                font-size: 9px;
             }
-    
-            form {
-                label {
-                    font-size: 9px;
-                }
-    
-                #checkbox {
-                    font-size: 9px;
-                }
+
+            #checkbox {
+                font-size: 9px;
+            }
             p {
                 font-size: 8px;
             }
@@ -366,9 +325,8 @@
                 font-size: 5.5px;
             }
         }
-    
-}
+    }
 }
 input:focus {
-    border-color: red; 
+    border-color: red;
 }
